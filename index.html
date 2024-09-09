@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Munge Grok</title>
+    <script src="table.js" defer></script>
+    <script src="controls.js" defer></script>
+    <script src="setup.js" defer></script>
+</head>
+<body class="bg-zinc-800 text-white p-4">
+    <div class="mb-4">
+        <h1 class="text-2xl font-semibold">
+            Munge Grok</h1>
+        <p class="text-sm text-gray-400 mt-1 mb-3 italic">
+            Simulated Munge Grok algorithm from Level 40 of ae27ff.
+            <br/>
+            This is just my current interpretation and might as well be wrong. I'm using this to help me understand the algorithm well enough to pass the level.
+        </p>
+        <div>
+            <!-- input two hex coordinates -->
+            <div class="flex mt-2">
+                <select id="grok-x" class="bg-zinc-700 text-white p-2 mr-2">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                    <option value="F">F</option>
+                </select>
+
+                <select id="grok-y" class="bg-zinc-700 text-white p-2 mr-2">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                    <option value="F">F</option>
+                </select>
+
+                <button 
+                    id="munge-button" 
+                    class="bg-zinc-700 text-white p-2 mr-2 hover:bg-zinc-600 active:bg-zinc-700"
+                >
+                    Munge
+                </button>
+
+                <button 
+                    id="grok-button" 
+                    class="bg-zinc-700 text-white p-2 mr-2 hover:bg-zinc-600 active:bg-zinc-700"
+                >
+                    Grok
+                </button>    
+                
+                <button 
+                    id="regen-id-button"
+                    class="bg-zinc-700 text-white p-2 mr-2 hover:bg-zinc-600 active:bg-zinc-700"
+                >
+                    Regenerate ID
+                </button>
+            </div>
+            <div class="flex mt-2">
+                <div class="bg-zinc-700 text-slate-400 p-2 mr-2">
+                    <span class="font-semibold">Output:</span>
+                    <span class="font-bold" id="output">?</span>
+                 </div>
+
+                 <div class="bg-zinc-700 text-slate-400 p-2 mr-2">
+                    <span class="font-semibold">Last Value:</span>
+                    <span class="font-bold" id="lastValue">0</span>
+                 </div>
+
+                 <div class="bg-zinc-700 text-slate-400 p-2 mr-2">
+                    <span class="font-semibold">Session ID:</span>
+                    <span class="font-bold" id="sessionId">None</span>
+                 </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
